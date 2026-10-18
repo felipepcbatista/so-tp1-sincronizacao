@@ -24,30 +24,26 @@ Checklist de entrega (enunciado):
       e regiões críticas, semáforos, estratégia contra deadlock, execução e testes
 - [ ] Links dos vídeos acessíveis (testar em aba anônima)
 
-## Como contribuir
+## Como clonar e executar
 
-1. Crie uma branch: `git checkout -b problema-b`
-2. Coloque o código em `src/<problema>/` (ex.: `src/barbeiro/`) e a modelagem em `docs/<letra>-<problema>.md`
-3. Atualize a sua linha na tabela acima
-4. Abra um Pull Request para a `main`
+Requer Java 21+ (`java -version` para conferir).
 
-Padrão sugerido, seguido em (d) e (e), que facilita o vídeo:
-- uma classe `Main<Problema>` que roda a simulação com log de cada passo;
-- uma versão **ingênua** que mostra o problema (deadlock ou condição de corrida) e a versão **correta**;
-- uma classe `Teste<Problema>` que roda várias vezes e confere invariantes, não só "rodou sem erro".
+```
+git clone https://github.com/felipepcbatista/so-tp1-sincronizacao.git
+cd so-tp1-sincronizacao
+```
 
-As classes `util.Log` (log com tempo e thread) e `util.Execucao` (detecta deadlock por tempo limite)
-podem ser reaproveitadas.
-
-## Como compilar e executar
-
-Requer Java 21+. No Windows (PowerShell), a partir da raiz:
+No Windows (PowerShell):
 
 ```powershell
 .\rodar.ps1 fumantes correto 10
+.\rodar.ps1 fumantes ingenuo 10
 .\rodar.ps1 filosofos garcom 3
+.\rodar.ps1 filosofos ingenuo 3
 .\rodar.ps1 testes
 ```
+
+Se o PowerShell bloquear o script, rode antes: `Set-ExecutionPolicy -Scope Process Bypass`.
 
 Em qualquer sistema:
 
@@ -55,6 +51,6 @@ Em qualquer sistema:
 javac -encoding UTF-8 -d out src/util/*.java src/fumantes/*.java src/filosofos/*.java
 java -cp out fumantes.MainFumantes correto 10
 java -cp out filosofos.MainFilosofos garcom 3
+java -cp out fumantes.TesteFumantes
+java -cp out filosofos.TesteFilosofos
 ```
-
-Ao adicionar um problema novo, inclua o pacote dele no `javac` acima e no `rodar.ps1`.
