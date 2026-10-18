@@ -1,0 +1,8 @@
+out/
+*.class
+.idea/
+.vscode/
+*.iml
+
+# anotações pessoais de roteiro de vídeo
+roteiro-video-*.md
