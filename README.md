@@ -11,7 +11,7 @@ Cada integrante explica no vídeo os problemas pelos quais é responsável.
 | Problema | Responsável | Código | Modelagem | Vídeo |
 |---|---|---|---|---|
 | (a) Produtor e Consumidor | _a definir_ | | | |
-| (b) Barbeiro Dorminhoco | _a definir_ | | | |
+| (b) Barbeiro Dorminhoco | André Almeida Silva | [`src/barbearia/`](src/barbearia/) | [docs/b-barbeiro.md](docs/b-barbeiro.md) | _pendente_ |
 | (c) Leitores e Escritores | _a definir_ | | | |
 | (d) Fumantes | Felipe Paz | [`src/fumantes/`](src/fumantes/) | [docs/d-fumantes.md](docs/d-fumantes.md) | _pendente_ |
 | (e) Jantar dos Filósofos | Felipe Paz | [`src/filosofos/`](src/filosofos/) | [docs/e-filosofos.md](docs/e-filosofos.md) | _pendente_ |
@@ -36,6 +36,9 @@ cd so-tp1-sincronizacao
 No Windows (PowerShell):
 
 ```powershell
+.\rodar.ps1 barbearia correto 12
+.\rodar.ps1 barbearia sem-mutex 12
+.\rodar.ps1 barbearia mutex-preso 12
 .\rodar.ps1 fumantes correto 10
 .\rodar.ps1 fumantes ingenuo 10
 .\rodar.ps1 filosofos garcom 3
@@ -48,9 +51,11 @@ Se o PowerShell bloquear o script, rode antes: `Set-ExecutionPolicy -Scope Proce
 Em qualquer sistema:
 
 ```
-javac -encoding UTF-8 -d out src/util/*.java src/fumantes/*.java src/filosofos/*.java
+javac -encoding UTF-8 -d out src/util/*.java src/barbearia/*.java src/fumantes/*.java src/filosofos/*.java
+java -cp out barbearia.MainBarbearia correto 12
 java -cp out fumantes.MainFumantes correto 10
 java -cp out filosofos.MainFilosofos garcom 3
+java -cp out barbearia.TesteBarbearia
 java -cp out fumantes.TesteFumantes
 java -cp out filosofos.TesteFilosofos
 ```
