@@ -11,7 +11,7 @@ Cada integrante explica no vídeo os problemas pelos quais é responsável.
 | Problema | Responsável | Código | Modelagem | Vídeo |
 |---|---|---|---|---|
 | (a) Produtor e Consumidor | _a definir_ | | | |
-| (b) Barbeiro Dorminhoco | André | [`src/barbearia/`](src/barbearia/) | [docs/b-barbeiro.md](docs/b-barbeiro.md) | _pendente_ |
+| (b) Barbeiro Dorminhoco | André Almeida Silva | [`src/barbearia/`](src/barbearia/) | [docs/b-barbeiro.md](docs/b-barbeiro.md) | _pendente_ |
 | (c) Leitores e Escritores | _a definir_ | | | |
 | (d) Fumantes | Felipe Paz | [`src/fumantes/`](src/fumantes/) | [docs/d-fumantes.md](docs/d-fumantes.md) | _pendente_ |
 | (e) Jantar dos Filósofos | Felipe Paz | [`src/filosofos/`](src/filosofos/) | [docs/e-filosofos.md](docs/e-filosofos.md) | _pendente_ |

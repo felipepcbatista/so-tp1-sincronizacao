@@ -1,6 +1,6 @@
 # (b) Problema do Barbeiro Dorminhoco
 
-Responsável: André
+Responsável: André Almeida Silva
 Código: [`src/barbearia/`](../src/barbearia/)
 
 ## Modelagem

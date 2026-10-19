@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import util.Execucao;
 
-/**
- * Problema do Barbeiro Dorminhoco.
- * Uso: java -cp out barbearia.MainBarbearia [correto|sem-mutex|mutex-preso] [clientes]
- */
 public class MainBarbearia {
 
     public record Resultado(boolean terminou, int totalClientes, int atendidos, int desistiram,
@@ -24,7 +20,7 @@ public class MainBarbearia {
         Barbearia loja = new Barbearia(modo, cadeiras, tempoCorteMs, pausaMs);
 
         Barbeiro barbeiro = new Barbeiro(loja);
-        barbeiro.start(); // chega de manhã e dorme até o primeiro cliente
+        barbeiro.start();
 
         List<Cliente> clientes = new ArrayList<>();
         for (int i = 1; i <= totalClientes; i++) {
@@ -36,9 +32,8 @@ public class MainBarbearia {
 
         List<Thread> todas = new ArrayList<>(clientes);
         todas.add(0, barbeiro);
-        // o barbeiro fica em laço infinito: quem precisa terminar são os clientes
         boolean terminou = Execucao.aguardar(clientes, todas, timeoutMs, MainBarbearia::descrever);
-        Execucao.encerrar(todas); // fecha a barbearia
+        Execucao.encerrar(todas);
 
         return new Resultado(terminou, totalClientes, loja.atendidos.get(), loja.desistiram.get(),
                 loja.cortesFeitos.get(), loja.maxEsperando.get(), loja.maxNaCadeira.get(),
@@ -65,10 +60,8 @@ public class MainBarbearia {
 
         Resultado r;
         if (modo == Barbearia.Modo.CORRETO) {
-            // chegadas mais rápidas que os cortes: a sala enche e alguns clientes vão embora
             r = executar(modo, cadeiras, totalClientes, 60, 250, 0, totalClientes * 400L + 3000);
         } else {
-            // os dois modos quebrados precisam de clientes chegando ao mesmo tempo
             r = executar(modo, cadeiras, totalClientes, 0, 100, 30, 5000);
         }
 

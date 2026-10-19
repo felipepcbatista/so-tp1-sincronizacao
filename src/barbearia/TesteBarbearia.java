@@ -2,10 +2,6 @@ package barbearia;
 
 import util.Log;
 
-/**
- * Validação automática do Barbeiro Dorminhoco.
- * Uso: java -cp out barbearia.TesteBarbearia
- */
 public class TesteBarbearia {
     private static int passou = 0, falhou = 0;
 
@@ -16,7 +12,7 @@ public class TesteBarbearia {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Log.ativo = false; // sem log linha a linha: são milhares de clientes
+        Log.ativo = false;
 
         int execucoes = 20, clientes = 200, cadeiras = 3;
         System.out.println("Teste 1 - CORRETO sob alta disputa: " + execucoes + " execuções x "
@@ -26,10 +22,10 @@ public class TesteBarbearia {
                     Barbearia.Modo.CORRETO, cadeiras, clientes, 0, 1, 0, 20_000);
             boolean ok = r.terminou()
                     && r.erros().isEmpty()
-                    && r.contabilizados() == clientes      // nenhum cliente se perdeu
-                    && r.cortesFeitos() == r.atendidos()   // um corte por cliente atendido
-                    && r.maxEsperando() <= cadeiras        // a sala nunca passou do número de cadeiras
-                    && r.maxNaCadeira() == 1;              // nunca dois na cadeira do barbeiro
+                    && r.contabilizados() == clientes
+                    && r.cortesFeitos() == r.atendidos()
+                    && r.maxEsperando() <= cadeiras
+                    && r.maxNaCadeira() == 1;
             if (!ok) System.out.println("  execução " + e + " falhou: " + r);
             verificar(ok, String.format(
                     "execução %2d: %d atendidos + %d foram embora = %d, cortes = %d, máx. na sala = %d, máx. na cadeira = %d",
