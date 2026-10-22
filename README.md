@@ -10,7 +10,7 @@ Cada integrante explica no vídeo os problemas pelos quais é responsável.
 
 | Problema | Responsável | Código | Modelagem | Vídeo |
 |---|---|---|---|---|
-| (a) Produtor e Consumidor | Felipe Paz | [`src/produtorconsumidor/`](src/produtorconsumidor/) | [docs/a-produtor-consumidor.md](docs/a-produtor-consumidor.md) | _pendente_ |
+| (a) Produtor e Consumidor | Felipe Paz | [`src/produtorconsumidor/`](src/produtorconsumidor/) | [docs/a-produtor-consumidor.md](docs/a-produtor-consumidor.md) | [assistir](https://youtu.be/CaZe-2ssIWo) |
 | (b) Barbeiro Dorminhoco | André Almeida Silva | [`src/barbearia/`](src/barbearia/) | [docs/b-barbeiro.md](docs/b-barbeiro.md) | [assistir](https://www.youtube.com/watch?v=dCvOYLgoWlQ) |
 | (c) Leitores e Escritores | _a definir_ | | | |
 | (d) Fumantes | Felipe Paz | [`src/fumantes/`](src/fumantes/) | [docs/d-fumantes.md](docs/d-fumantes.md) | [assistir](https://youtu.be/cHHlKHko1ik) |
