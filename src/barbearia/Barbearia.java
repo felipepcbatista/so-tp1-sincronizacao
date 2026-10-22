@@ -47,6 +47,7 @@ public class Barbearia {
                 desistiram.incrementAndGet();
                 return false;
             }
+            // se quebrar esse mutex eu n sei oq faço desculpa professor :(
             if (modo == Modo.SEM_MUTEX) Thread.sleep(pausaNaDecisaoMs);
 
             esperando++;

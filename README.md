@@ -12,7 +12,7 @@ Cada integrante explica no vídeo os problemas pelos quais é responsável.
 |---|---|---|---|---|
 | (a) Produtor e Consumidor | Felipe Paz | [`src/produtorconsumidor/`](src/produtorconsumidor/) | [docs/a-produtor-consumidor.md](docs/a-produtor-consumidor.md) | [assistir](https://youtu.be/CaZe-2ssIWo) |
 | (b) Barbeiro Dorminhoco | André Almeida Silva | [`src/barbearia/`](src/barbearia/) | [docs/b-barbeiro.md](docs/b-barbeiro.md) | [assistir](https://www.youtube.com/watch?v=dCvOYLgoWlQ) |
-| (c) Leitores e Escritores | _a definir_ | | | |
+| (c) Leitores e Escritores | André Almeida Silva | [`src/leitores/`](src/leitores/) | [docs/c-leitores.md](docs/c-leitores.md) | [assistir](https://youtu.be/gKzcSU_tsZA) |
 | (d) Fumantes | Felipe Paz | [`src/fumantes/`](src/fumantes/) | [docs/d-fumantes.md](docs/d-fumantes.md) | [assistir](https://youtu.be/cHHlKHko1ik) |
 | (e) Jantar dos Filósofos | Felipe Paz | [`src/filosofos/`](src/filosofos/) | [docs/e-filosofos.md](docs/e-filosofos.md) | [assistir](https://youtu.be/HlANrU8fFoU) |
 | (f) Jantar dos Selvagens | Petrius |[`src/selvagens/`](src/selvagens/) |[docs/f-jantardosselvagens.md](docs/f-jantardosselvagens.md) |[assistir](https://youtu.be/QjNvegVqQGo) |
@@ -43,6 +43,9 @@ No Windows (PowerShell):
 .\rodar.ps1 barbearia correto 12
 .\rodar.ps1 barbearia sem-mutex 12
 .\rodar.ps1 barbearia mutex-preso 12
+.\rodar.ps1 leitores correto 5
+.\rodar.ps1 leitores prioridade-leitor 8
+.\rodar.ps1 leitores sem-sincronia 6
 .\rodar.ps1 fumantes correto 10
 .\rodar.ps1 fumantes ingenuo 10
 .\rodar.ps1 filosofos garcom 3
@@ -55,14 +58,16 @@ Se o PowerShell bloquear o script, rode antes: `Set-ExecutionPolicy -Scope Proce
 Em qualquer sistema:
 
 ```
-javac -encoding UTF-8 -d out src/util/*.java src/produtorconsumidor/*.java src/produtorconsumidor/parte1/*.java src/barbearia/*.java src/fumantes/*.java src/filosofos/*.java
+javac -encoding UTF-8 -d out src/util/*.java src/produtorconsumidor/*.java src/produtorconsumidor/parte1/*.java src/barbearia/*.java src/leitores/*.java src/fumantes/*.java src/filosofos/*.java
 java -cp out produtorconsumidor.parte1.ProdCons
 java -cp out produtorconsumidor.MainProdutorConsumidor correto 6
 java -cp out barbearia.MainBarbearia correto 12
+java -cp out leitores.MainLeitores correto 5
 java -cp out fumantes.MainFumantes correto 10
 java -cp out filosofos.MainFilosofos garcom 3
 java -cp out produtorconsumidor.TesteProdutorConsumidor
 java -cp out barbearia.TesteBarbearia
+java -cp out leitores.TesteLeitores
 java -cp out fumantes.TesteFumantes
 java -cp out filosofos.TesteFilosofos
 ```
