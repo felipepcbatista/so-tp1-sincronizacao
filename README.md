@@ -10,7 +10,7 @@ Cada integrante explica no vídeo os problemas pelos quais é responsável.
 
 | Problema | Responsável | Código | Modelagem | Vídeo |
 |---|---|---|---|---|
-| (a) Produtor e Consumidor | _a definir_ | | | |
+| (a) Produtor e Consumidor | Felipe Paz | [`src/produtorconsumidor/`](src/produtorconsumidor/) | [docs/a-produtor-consumidor.md](docs/a-produtor-consumidor.md) | _pendente_ |
 | (b) Barbeiro Dorminhoco | André Almeida Silva | [`src/barbearia/`](src/barbearia/) | [docs/b-barbeiro.md](docs/b-barbeiro.md) | [assistir](https://www.youtube.com/watch?v=dCvOYLgoWlQ) |
 | (c) Leitores e Escritores | _a definir_ | | | |
 | (d) Fumantes | Felipe Paz | [`src/fumantes/`](src/fumantes/) | [docs/d-fumantes.md](docs/d-fumantes.md) | [assistir](https://youtu.be/cHHlKHko1ik) |
@@ -36,6 +36,10 @@ cd so-tp1-sincronizacao
 No Windows (PowerShell):
 
 ```powershell
+.\rodar.ps1 produtor original
+.\rodar.ps1 produtor correto 6
+.\rodar.ps1 produtor sem-mutex 6
+.\rodar.ps1 produtor mutex-antes 6
 .\rodar.ps1 barbearia correto 12
 .\rodar.ps1 barbearia sem-mutex 12
 .\rodar.ps1 barbearia mutex-preso 12
@@ -51,10 +55,13 @@ Se o PowerShell bloquear o script, rode antes: `Set-ExecutionPolicy -Scope Proce
 Em qualquer sistema:
 
 ```
-javac -encoding UTF-8 -d out src/util/*.java src/barbearia/*.java src/fumantes/*.java src/filosofos/*.java
+javac -encoding UTF-8 -d out src/util/*.java src/produtorconsumidor/*.java src/produtorconsumidor/parte1/*.java src/barbearia/*.java src/fumantes/*.java src/filosofos/*.java
+java -cp out produtorconsumidor.parte1.ProdCons
+java -cp out produtorconsumidor.MainProdutorConsumidor correto 6
 java -cp out barbearia.MainBarbearia correto 12
 java -cp out fumantes.MainFumantes correto 10
 java -cp out filosofos.MainFilosofos garcom 3
+java -cp out produtorconsumidor.TesteProdutorConsumidor
 java -cp out barbearia.TesteBarbearia
 java -cp out fumantes.TesteFumantes
 java -cp out filosofos.TesteFilosofos
