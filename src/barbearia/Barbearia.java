@@ -48,6 +48,7 @@ public class Barbearia {
                 return false;
             }
             // se quebrar esse mutex eu n sei oq faço desculpa professor :(
+            // fix: consertado
             if (modo == Modo.SEM_MUTEX) Thread.sleep(pausaNaDecisaoMs);
 
             esperando++;
