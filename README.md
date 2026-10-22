@@ -15,7 +15,7 @@ Cada integrante explica no vídeo os problemas pelos quais é responsável.
 | (c) Leitores e Escritores | _a definir_ | | | |
 | (d) Fumantes | Felipe Paz | [`src/fumantes/`](src/fumantes/) | [docs/d-fumantes.md](docs/d-fumantes.md) | _pendente_ |
 | (e) Jantar dos Filósofos | Felipe Paz | [`src/filosofos/`](src/filosofos/) | [docs/e-filosofos.md](docs/e-filosofos.md) | _pendente_ |
-| (f) Jantar dos Selvagens | Petrius |[`src/selvagens/`](src/selvagens/) |[docs/f-jantardosselvagens.md](docs/f-jantardosselvagens.md) | |
+| (f) Jantar dos Selvagens | Petrius |[`src/selvagens/`](src/selvagens/) |[docs/f-jantardosselvagens.md](docs/f-jantardosselvagens.md) |[assistir](https://youtu.be/QjNvegVqQGo) |
 | (g) Três Robôs | _a definir_ | | | |
 
 Checklist de entrega (enunciado):
