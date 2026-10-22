@@ -13,8 +13,8 @@ Cada integrante explica no vídeo os problemas pelos quais é responsável.
 | (a) Produtor e Consumidor | _a definir_ | | | |
 | (b) Barbeiro Dorminhoco | André Almeida Silva | [`src/barbearia/`](src/barbearia/) | [docs/b-barbeiro.md](docs/b-barbeiro.md) | [assistir](https://www.youtube.com/watch?v=dCvOYLgoWlQ) |
 | (c) Leitores e Escritores | _a definir_ | | | |
-| (d) Fumantes | Felipe Paz | [`src/fumantes/`](src/fumantes/) | [docs/d-fumantes.md](docs/d-fumantes.md) | _pendente_ |
-| (e) Jantar dos Filósofos | Felipe Paz | [`src/filosofos/`](src/filosofos/) | [docs/e-filosofos.md](docs/e-filosofos.md) | _pendente_ |
+| (d) Fumantes | Felipe Paz | [`src/fumantes/`](src/fumantes/) | [docs/d-fumantes.md](docs/d-fumantes.md) | [assistir](https://youtu.be/cHHlKHko1ik) |
+| (e) Jantar dos Filósofos | Felipe Paz | [`src/filosofos/`](src/filosofos/) | [docs/e-filosofos.md](docs/e-filosofos.md) | [assistir](https://youtu.be/HlANrU8fFoU) |
 | (f) Jantar dos Selvagens | Petrius |[`src/selvagens/`](src/selvagens/) |[docs/f-jantardosselvagens.md](docs/f-jantardosselvagens.md) |[assistir](https://youtu.be/QjNvegVqQGo) |
 | (g) Três Robôs | _a definir_ | | | |
 
